@@ -83,7 +83,7 @@ def create_app(config=None, testing=False):
         )
         av = admin.add_view
         vs = views
-        av(vs.Airflow(name='DAGs', category='DAGs'))
+        av(vs.Airflow(name='Workflows', category='DAGs'))
 
         if not conf.getboolean('core', 'secure_mode'):
             av(vs.QueryView(name='Ad Hoc Query', category="Data Profiling"))
